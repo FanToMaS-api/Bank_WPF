@@ -19,7 +19,7 @@ namespace HomeWork_13_Bank_WPF
 
             lock (obj)
             {
-                salary = BasicClient.salaryArray[2];
+                salary = salaryArray[2];
                 id = NextId();
             }
 
