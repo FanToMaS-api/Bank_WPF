@@ -1,0 +1,63 @@
+﻿<Window x:Class="HomeWork_13_Bank_WPF.NewClientDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeWork_13_Bank_WPF"
+        mc:Ignorable="d"
+        Title="Новый клиент" 
+        ContentRendered="Window_ContentRendered"
+        ResizeMode="CanMinimize"
+        SizeToContent="WidthAndHeight"
+         FontSize="16"
+        WindowStartupLocation="CenterScreen">
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="543*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Margin="5" 
+                    Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal"
+                    Margin="3">
+                <TextBlock Text="Введите имя:"
+                       Margin="2.5"/>
+                <TextBox x:Name="EnteredNewClientName"
+                     MinWidth="125"
+                     Margin="39,2.5,2.5,2.5"
+                     HorizontalAlignment="Right"
+                     TextWrapping="Wrap"/>
+                <!---TextWrapping - позвляет переносить строку-->
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                    Margin="3">
+                <TextBlock Text="Введите пароль:"
+                       Margin="2.5"/>
+                <PasswordBox x:Name="EnteredNewClientPassword"
+                     MinWidth="125"
+                     Margin="15,2.5,2.5,2.5"
+                     HorizontalAlignment="Right"
+                     MaxLength="15"/>
+                <!---TextWrapping - позвляет переносить строку-->
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                    Margin="3">
+                <TextBlock Text="Тип:"
+                        Margin="2.5"/>
+                <ComboBox x:Name="cmbTypeofClient"
+                     MinWidth="125"
+                     Margin="104,2.5,2.5,2.5"
+                     HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+                <Button x:Name="Ok"
+                        Content="Ok"
+                        Width="50"
+                        IsDefault="True"
+                        Margin="2,2,6,2"
+                        Click="Ok_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

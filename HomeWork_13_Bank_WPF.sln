@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork_13_Bank_WPF", "HomeWork_13_Bank_WPF\HomeWork_13_Bank_WPF.csproj", "{466146B8-9766-4D64-9DA6-902D38C05D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionLibrary", "ExtensionLibrary\ExtensionLibrary.csproj", "{982B96DA-6621-4B4B-BE7A-8282F5318A7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{466146B8-9766-4D64-9DA6-902D38C05D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{466146B8-9766-4D64-9DA6-902D38C05D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{466146B8-9766-4D64-9DA6-902D38C05D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{466146B8-9766-4D64-9DA6-902D38C05D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{982B96DA-6621-4B4B-BE7A-8282F5318A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982B96DA-6621-4B4B-BE7A-8282F5318A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982B96DA-6621-4B4B-BE7A-8282F5318A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982B96DA-6621-4B4B-BE7A-8282F5318A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {325C863D-0DEB-4A11-BBE4-A1E52F507AFC}
+	EndGlobalSection
+EndGlobal

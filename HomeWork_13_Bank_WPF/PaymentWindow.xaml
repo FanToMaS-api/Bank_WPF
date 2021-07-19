@@ -1,0 +1,34 @@
+﻿<Window x:Class="HomeWork_13_Bank_WPF.PaymentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeWork_13_Bank_WPF"
+        mc:Ignorable="d"
+        Title="Банк Sun_Rise"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        ContentRendered="Window_ContentRendered"
+        MinWidth="240">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Margin="2.5"
+                       FontSize="13">
+                Введите сумму:</TextBlock>
+                <TextBox HorizontalAlignment="Right"
+                     x:Name="PaymentEntered"
+                     Width="95"
+                     Margin="20,2.5,2.5,2.5"/>
+            </StackPanel>
+            <Button Width="40"
+                    x:Name="Ok"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,20,4"
+                    Content="Ok"
+                    Click="Ok_Click"
+                    IsDefault="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
