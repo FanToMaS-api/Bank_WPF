@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HomeWork_13_Bank_WPF
 {
-    class DataBase
+    internal class DataBase
     {
         #region Fileds
 

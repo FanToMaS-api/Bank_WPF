@@ -58,7 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Authorization.xaml.cs">
+    <Compile Include="Views\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
     </Compile>
     <Compile Include="Bank.cs" />
@@ -66,31 +66,31 @@
     <Compile Include="DataBase.cs" />
     <Compile Include="Deposit.cs" />
     <Compile Include="EntityClient.cs" />
-    <Compile Include="HistoryOperation.xaml.cs">
+    <Compile Include="Views\HistoryOperation.xaml.cs">
       <DependentUpon>HistoryOperation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NewClientDialogWindow.xaml.cs">
+    <Compile Include="Views\NewClientDialogWindow.xaml.cs">
       <DependentUpon>NewClientDialogWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Password.xaml.cs">
+    <Compile Include="Views\Password.xaml.cs">
       <DependentUpon>Password.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PaymentWindow.xaml.cs">
+    <Compile Include="Views\PaymentWindow.xaml.cs">
       <DependentUpon>PaymentWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAccount.xaml.cs">
+    <Compile Include="Views\PersonalAccount.xaml.cs">
       <DependentUpon>PersonalAccount.xaml</DependentUpon>
     </Compile>
     <Compile Include="VipClient.cs" />
-    <Page Include="Authorization.xaml">
+    <Page Include="Views\Authorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HistoryOperation.xaml">
+    <Page Include="Views\HistoryOperation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -100,23 +100,23 @@
     </Compile>
     <Compile Include="BasicClient.cs" />
     <Compile Include="Client.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NewClientDialogWindow.xaml">
+    <Page Include="Views\NewClientDialogWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Password.xaml">
+    <Page Include="Views\Password.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PaymentWindow.xaml">
+    <Page Include="Views\PaymentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PersonalAccount.xaml">
+    <Page Include="Views\PersonalAccount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

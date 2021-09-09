@@ -5,10 +5,14 @@ using System.Diagnostics;
 
 namespace HomeWork_13_Bank_WPF
 {
-    class Client : BasicClient
+    /// <summary>
+    ///     Обычный клиент банка
+    /// </summary>
+    internal class Client : BasicClient
     {
         #region .ctor
 
+        /// <inheritdoc cref="Client"/>
         public Client(string name, double balance, ref Bank bank)
         {
             this.name = name;
@@ -17,7 +21,7 @@ namespace HomeWork_13_Bank_WPF
 
             lock (obj)
             {
-                salary = BasicClient.salaryArray[0];
+                salary = salaryArray[0];
                 id = NextId();
             }
 
@@ -43,6 +47,7 @@ namespace HomeWork_13_Bank_WPF
 
         }
 
+        /// <inheritdoc cref="Client"/>
         public Client()
         {
             name = null;

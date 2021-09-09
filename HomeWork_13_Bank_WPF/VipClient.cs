@@ -5,10 +5,14 @@ using System.Diagnostics;
 
 namespace HomeWork_13_Bank_WPF
 {
-    class VipClient :  BasicClient
+    /// <summary>
+    ///     ВИП клиент
+    /// </summary>
+    internal class VipClient :  BasicClient
     {
         #region .ctor
 
+        /// <inheritdoc cref="VipClient"/>
         public VipClient(string name, double balance, ref Bank bank)
         {
             this.name = name;
@@ -19,7 +23,7 @@ namespace HomeWork_13_Bank_WPF
 
             lock (obj)
             {
-                salary = BasicClient.salaryArray[1];
+                salary = salaryArray[1];
                 id = NextId();
             }
 
@@ -39,6 +43,8 @@ namespace HomeWork_13_Bank_WPF
                 Debug.Print(e.Message);
             }
         }
+
+        /// <inheritdoc cref="VipClient"/>
         public VipClient()
         {
             name = null;

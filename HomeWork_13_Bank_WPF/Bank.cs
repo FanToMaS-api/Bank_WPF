@@ -15,12 +15,19 @@ namespace HomeWork_13_Bank_WPF
         #region Fields
 
         private ObservableCollection<Credit> _allBankCredits; // все кредиты банка
+
         private readonly ObservableCollection<BasicClient> _allBankClient; // все клиенты банка
+
         private readonly List<int> _listPasswordsHash; // все клиенты банка
+
         private double _allMoney; // все средства которыми располагает банк на данный момент
+
         private ObservableCollection<Deposit> _allBankDeposits;
+
         public event Action<string, int, BasicClient> HistoryEvent;
+
         private JArray _clientsArr;
+
         private JToken[] _arrOfClients;
 
         #endregion
@@ -47,7 +54,7 @@ namespace HomeWork_13_Bank_WPF
         {
             get
             {
-                ObservableCollection<Credit> credits = new ObservableCollection<Credit>();
+                var credits = new ObservableCollection<Credit>();
 
                 for (var i = 0; i < _allBankCredits.Count; i++)
                 {

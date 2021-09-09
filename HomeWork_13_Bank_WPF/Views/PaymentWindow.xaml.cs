@@ -1,27 +1,35 @@
 ﻿using System;
-using ExtensionLibrary;
 using System.Windows;
+using ExtensionLibrary;
 
-namespace HomeWork_13_Bank_WPF
+namespace HomeWork_13_Bank_WPF.Views
 {
     /// <summary>
     /// Логика взаимодействия для PaymentWindow.xaml
     /// </summary>
-    public partial class PaymentWindow : Window
+    public partial class PaymentWindow
     {
+        #region Fields
+
         private double _payment;
+
         /// <summary>
-        /// Возвращает значение введеное пользователем
+        ///     Возвращает значение введеное пользователем
         /// </summary>
-        public double GetPayment
-        {
-            get => _payment;
-        }
-        
+        public double GetPayment => _payment;
+
+        #endregion
+
+        #region .ctor
+
         public PaymentWindow()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Private methods
 
         private void Window_ContentRendered(object sender, EventArgs e)
         {
@@ -32,21 +40,25 @@ namespace HomeWork_13_Bank_WPF
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
             try
-            {                
+            {
                 _payment = PaymentEntered.Text.ToDouble();
                 if (_payment > 0)
                 {
-                    this.DialogResult = true;
-                    this.Close();
+                    DialogResult = true;
+                    Close();
                 }
                 else
+                {
                     throw new Exception();
+                }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Некорректный ввод.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                this.Close();
+                Close();
             }
         }
+
+        #endregion
     }
 }

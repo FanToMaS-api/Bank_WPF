@@ -4,23 +4,34 @@ using System.Collections.ObjectModel;
 
 namespace HomeWork_13_Bank_WPF
 {
+    /// <summary>
+    ///     Модель кредита
+    /// </summary>
     public class Credit : IEquatable<Credit>, ICloneable, INotifyPropertyChanged
     {
         #region Fields
 
         private double _credit; // сумма кредита
-        private double _percent; // процент 
+
+        private double _percent; // процент
+
         private readonly int _days; // срок в днях
+
         private double _sanction; // санкция при просрочке внесения платы по кредиту
+
         private double _fine; // общая сумма штрафа по просрочкам
+
         private readonly string _name; // название кредита
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         private event Action<string, int, BasicClient> HistoryEvent;
 
         #endregion
 
         #region .ctor
 
+        /// <inheritdoc cref="Credit"/>
         public Credit(double credit, double percent, int days, string name, double fine)
         {
             _credit = credit;
@@ -49,7 +60,7 @@ namespace HomeWork_13_Bank_WPF
             set
             {
                 _fine = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Fine)));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Fine)));
             }
         }
 
@@ -162,7 +173,7 @@ namespace HomeWork_13_Bank_WPF
         /// </summary>
         public bool Equals(Credit other)
         {
-            return other != null && (_name == other._name);
+            return other != null && _name == other._name;
         }
 
         /// <summary>

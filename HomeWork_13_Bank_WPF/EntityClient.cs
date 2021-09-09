@@ -5,10 +5,14 @@ using System.Diagnostics;
 
 namespace HomeWork_13_Bank_WPF
 {
-    class EntityClient : BasicClient
+    /// <summary>
+    ///     Юридическое лицо
+    /// </summary>
+    internal class EntityClient : BasicClient
     {
         #region .ctor
 
+        /// <inheritdoc cref="EntityClient"/>
         public EntityClient(string name, double balance, ref Bank bank)
         {
             this.name = name;
@@ -40,6 +44,7 @@ namespace HomeWork_13_Bank_WPF
             }
         }
 
+        /// <inheritdoc cref="EntityClient"/>
         public EntityClient()
         {
             name = null;

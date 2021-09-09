@@ -18,24 +18,34 @@ namespace HomeWork_13_Bank_WPF
         No
     }
 
+    /// <summary>
+    ///     Модель депозита
+    /// </summary>
     public class Deposit : IEquatable<Deposit>, ICloneable, INotifyPropertyChanged
     {
         #region Fields
 
         private double _deposit;     // сумма депозита
-        private double _percent;     // процент 
+
+        private double _percent;     // процент
+
         private int _days;           // срок в днях
+
         private string _name;        // название вклада
+
         private OppotunityWithdrawingMoney _withdrawing;          // Возможность снятия средств
+
         private OppotunityReplenishmentDeposit _replenishment;    // Возможность пополнения вклада
 
         public event PropertyChangedEventHandler PropertyChanged; // Отражает изменение полей депозита без обновления всей таблицы
+
         protected event Action<string, int, BasicClient> HistoryEvent;
 
         #endregion
 
         #region .ctor
 
+        /// <inheritdoc cref="Deposit"/>
         public Deposit()
         {
             _deposit = 0;
@@ -45,7 +55,14 @@ namespace HomeWork_13_Bank_WPF
             _withdrawing = OppotunityWithdrawingMoney.No;
 
         }
-        public Deposit(string name, double deposit, double percent, int days, OppotunityWithdrawingMoney oppotunity,
+
+        /// <inheritdoc cref="Deposit"/>
+        public Deposit(
+            string name,
+            double deposit,
+            double percent,
+            int days,
+            OppotunityWithdrawingMoney oppotunity,
             OppotunityReplenishmentDeposit replenishmentDeposit)
         {
             _name = name;
@@ -84,7 +101,7 @@ namespace HomeWork_13_Bank_WPF
             set
             {
                 _deposit = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.GetMinSumOfDeposit)));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(GetMinSumOfDeposit)));
             }
         }
 
@@ -106,7 +123,7 @@ namespace HomeWork_13_Bank_WPF
             set
             {
                 _days = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Days)));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Days)));
             }
         }
 
@@ -203,7 +220,7 @@ namespace HomeWork_13_Bank_WPF
         }
 
         /// <summary>
-        ///     Добавляет средства на счет вклада, если предусмотрена такая возможность и возвращает true 
+        ///     Добавляет средства на счет вклада, если предусмотрена такая возможность и возвращает true
         ///     если все прошло успешно, иначе возвращает false
         /// </summary>
         public bool AddMoneyToDeposit(double value, BasicClient client)
@@ -247,7 +264,7 @@ namespace HomeWork_13_Bank_WPF
         /// </summary>
         public bool Equals(Deposit other)
         {
-            return other != null && (_name == other._name);
+            return other != null && _name == other._name;
         }
 
         /// <summary>

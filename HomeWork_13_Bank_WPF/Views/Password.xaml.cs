@@ -1,19 +1,20 @@
 ﻿using System;
-using ExtensionLibrary;
 using System.Windows;
+using ExtensionLibrary;
 
-
-namespace HomeWork_13_Bank_WPF
+namespace HomeWork_13_Bank_WPF.Views
 {
     /// <summary>
-    /// Логика взаимодействия для Password.xaml
+    ///     Логика взаимодействия для Password.xaml
     /// </summary>
-    public partial class Password : Window
+    public partial class Password
     {
         public Password()
         {
             InitializeComponent();
         }
+
+        #region Private methods
 
         private void Window_ContentRendered(object sender, EventArgs e)
         {
@@ -25,20 +26,24 @@ namespace HomeWork_13_Bank_WPF
         {
             try
             {
-                int password = PasswordEntered.Text.ToInt();
+                var password = PasswordEntered.Text.ToInt();
                 if (password == 777 || password == 0102)
                 {
-                    this.DialogResult = true;
-                    this.Close();
+                    DialogResult = true;
+                    Close();
                 }
                 else
+                {
                     throw new Exception();
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("Что-то пошло не так...", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                this.Close();
+                Close();
             }
         }
+
+        #endregion
     }
 }

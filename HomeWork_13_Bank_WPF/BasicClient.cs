@@ -2,32 +2,50 @@
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
+using HomeWork_13_Bank_WPF.Views;
 
 namespace HomeWork_13_Bank_WPF
 {
+    /// <summary>
+    ///     Базовый класс клиента банка
+    /// </summary>
     public abstract class BasicClient : INotifyPropertyChanged
     {
         #region Fields
 
-
         protected static uint staticId;
+
         protected object obj = new object(); // объект для блокировки при параллельном сохранении, занесении данных
+
         protected uint id;  // id клиента
+
         protected string name; // имя клиента
+
         protected string password; // пароль клиента
+
         protected double balance; // баланс
+
         protected double trust; // уровень доверия к клиенту
+
         protected ObservableCollection<Credit> credits; // кредиты клиента
+
         protected ObservableCollection<Deposit> deposits; // вклады клиента
+
         protected uint completedCredit; // завершенные кредиты
+
         protected double salary; // зарплата клиента
+
         protected event Action<string, int, BasicClient> HistoryEvent; // событие, реагирующее на изменение баланса клиента
 
         public static int[] salaryArray; // массив, содержащий в себе зарплаты всех типов клиентов на индексе 0 - зарплата обычного клиента
                                          // на индексе 1 - зарплата VIP-клиента, на индексе 2 - зарплата юридческого лица
+
         public List<string> listOfHistoryMessages; // лист сообщений в истории клиента
+
         public List<int> listTypesOfHistoryMess; // лист типов (раскраски) сообщений в истории клиента
+
         public HistoryOperation historyOperationWindow; // окно для инициализации собственной истории сообщений для каждого клиента
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         #endregion
@@ -40,7 +58,10 @@ namespace HomeWork_13_Bank_WPF
         static BasicClient()
         {
             staticId = 0;
-            salaryArray = new int[3] { 1000, 2000, 3000 };  // массив, содержащий в себе зарплаты всех типов клиентов на индексе 0 - зарплата обычного клиента,//                  на индексе 1 - зарплата VIP-клиента, на индексе 2 - зарплата юридческого лица
+            salaryArray = new[] { 1000, 2000, 3000 };  // массив, содержащий в себе зарплаты всех типов клиентов
+                                                       // на индексе 0 - зарплата обычного клиента,
+                                                       // на индексе 1 - зарплата VIP-клиента,
+                                                       // на индексе 2 - зарплата юридческого лица
         }
 
         #endregion
