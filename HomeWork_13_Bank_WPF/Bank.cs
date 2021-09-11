@@ -78,13 +78,13 @@ namespace HomeWork_13_Bank_WPF
         {
             get
             {
-                ObservableCollection<Deposit> deposits = new ObservableCollection<Deposit>();
+                var deposits = new ObservableCollection<Deposit>();
 
-                for (var i = 0; i < _allBankDeposits.Count; i++)
+                foreach (var deposit in _allBankDeposits)
                 {
-                    deposits.Add(new Deposit(_allBankDeposits[i].Name, _allBankDeposits[i].GetMinSumOfDeposit,
-                        _allBankDeposits[i].Percent, _allBankDeposits[i].Days,
-                        _allBankDeposits[i].WithdrawingMoneyForBank, _allBankDeposits[i].ReplenishmentDepositForBank));
+                    deposits.Add(new Deposit(deposit.Name, deposit.GetMinSumOfDeposit,
+                        deposit.Percent, deposit.Days,
+                        deposit.WithdrawingMoneyForBank, deposit.ReplenishmentDepositForBank));
                 }
 
                 return deposits;

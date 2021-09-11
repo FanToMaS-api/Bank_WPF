@@ -50,7 +50,7 @@ namespace HomeWork_13_Bank_WPF
         /// <inheritdoc cref="Client"/>
         public Client()
         {
-            name = null;
+            name = "";
             balance = 0;
             trust = 1.00;
             password = "0";

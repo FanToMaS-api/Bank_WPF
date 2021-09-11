@@ -120,6 +120,7 @@ namespace HomeWork_13_Bank_WPF
         {
             get => id;
             set => id = value;
+            // TODO: Переписать полностью с Immutable полями и св-ми
         }
 
         /// <summary>

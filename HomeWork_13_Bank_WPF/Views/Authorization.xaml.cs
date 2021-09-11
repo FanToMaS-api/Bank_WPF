@@ -16,8 +16,11 @@ namespace HomeWork_13_Bank_WPF.Views
 
         #endregion
 
-        #region Свойства
+        #region Properties
 
+        /// <summary>
+        ///     Возврат выбора клинта
+        /// </summary>
         public int Choise => _choise;
 
         /// <summary>
