@@ -8,7 +8,7 @@ namespace HomeWork_13_Bank_WPF.Views
     /// <summary>
     /// Логика взаимодействия для HistoryOperation.xaml
     /// </summary>
-    public partial class HistoryOperation
+    public partial class HistoryOperation : Window
     {
         #region Fields
 

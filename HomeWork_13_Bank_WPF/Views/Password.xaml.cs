@@ -7,7 +7,7 @@ namespace HomeWork_13_Bank_WPF.Views
     /// <summary>
     ///     Логика взаимодействия для Password.xaml
     /// </summary>
-    public partial class Password
+    public partial class Password : Window
     {
         public Password()
         {

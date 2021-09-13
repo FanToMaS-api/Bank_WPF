@@ -7,7 +7,7 @@ namespace HomeWork_13_Bank_WPF.Views
     /// <summary>
     ///     Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow
+    public partial class MainWindow : Window
     {
         #region Fields
 

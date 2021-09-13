@@ -7,7 +7,7 @@ namespace HomeWork_13_Bank_WPF.Views
     /// <summary>
     /// Логика взаимодействия для NewClientDialogWindow.xaml
     /// </summary>
-    public partial class NewClientDialogWindow
+    public partial class NewClientDialogWindow : Window
     {
         public NewClientDialogWindow()
         {

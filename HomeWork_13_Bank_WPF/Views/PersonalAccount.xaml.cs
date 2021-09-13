@@ -9,7 +9,7 @@ namespace HomeWork_13_Bank_WPF.Views
     /// <summary>
     /// Логика взаимодействия для PersonalAccount.xaml
     /// </summary>
-    public partial class PersonalAccount
+    public partial class PersonalAccount : Window
     {
         #region Fields
 

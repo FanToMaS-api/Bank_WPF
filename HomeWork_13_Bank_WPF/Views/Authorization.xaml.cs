@@ -8,7 +8,7 @@ namespace HomeWork_13_Bank_WPF.Views
     /// <summary>
     ///     Логика взаимодействия для Authorization.xaml
     /// </summary>
-    public partial class Authorization
+    public partial class Authorization : Window
     {
         #region Fields
 

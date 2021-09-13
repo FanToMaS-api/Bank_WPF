@@ -7,7 +7,7 @@ namespace HomeWork_13_Bank_WPF.Views
     /// <summary>
     /// Логика взаимодействия для PaymentWindow.xaml
     /// </summary>
-    public partial class PaymentWindow
+    public partial class PaymentWindow : Window
     {
         #region Fields
 
