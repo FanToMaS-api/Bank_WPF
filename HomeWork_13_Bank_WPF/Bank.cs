@@ -10,6 +10,9 @@ using System.Collections.Generic;
 
 namespace HomeWork_13_Bank_WPF
 {
+    /// <summary>
+    ///     Модель банка
+    /// </summary>
     public class Bank
     {
         #region Fields

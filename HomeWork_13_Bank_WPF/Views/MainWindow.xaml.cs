@@ -34,8 +34,10 @@ namespace HomeWork_13_Bank_WPF.Views
             InitializeComponent();
             TableOfClients.Visibility = Visibility.Hidden;
             _bank = new Bank();
-            _dataBase = new DataBase();
-            _dataBase.DataUpload(_bank);
+            _bank.GetInfoFromJson();
+
+            //_dataBase = new DataBase();
+            // _dataBase.DataUpload(_bank);
 
             TableOfClients.ItemsSource = _bank.AllBankClient;
             _timer0 = new DispatcherTimer();     // таймер для вывода времени
@@ -188,9 +190,9 @@ namespace HomeWork_13_Bank_WPF.Views
         {
             _timer0.Stop();
             _timer1.Stop();
-            _dataBase.DataSave(_bank);
-            //MessageBox.Show("Выгрузка данных может занять некоторое время.\nПожалуйста, подождите.", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-            //bank.Save();
+            // _dataBase.DataSave(_bank);
+            MessageBox.Show("Выгрузка данных может занять некоторое время.\nПожалуйста, подождите.", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+            _bank.Save();
             Application.Current.Shutdown();
         }
         private void SignIn_Click(object sender, RoutedEventArgs e)
